@@ -67,6 +67,9 @@ def cc_flags(state):
 def py_flags(state):
   return [
       '--work_dir={}'.format(fsdb.working_dir()),
+      '--trunk_layers=10',
+      '--conv_width=64',
+      '--value_cost_weight=0.25',
       '--training_seed={}'.format(state.seed),
   ]
 

@@ -1,5 +1,7 @@
 build --define=tf=1
-build --define=board_size=9
+build --define=board_size=19
+build --copt=-DMINIGO_BOARD_SIZE=19
+run --action_env=BOARD_SIZE=19
 
 import %workspace%/tensorflow.bazelrc
 import %workspace%/tf_configure.bazelrc
